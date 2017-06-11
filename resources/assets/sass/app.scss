@@ -1,0 +1,124 @@
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+* {
+	font-family: monospace, sans-serif;
+	transition: all 0.3s ease-in-out;
+}
+.calculator {
+	width: $width;
+	font-size: 20px;
+
+
+	.display {		
+		* {
+			width: $width;
+			text-align: right;
+			height: 40px;
+		}
+		input {
+			padding: 0 10px 0 0;
+			border: 1px solid black;
+			outline-offset: 0px; 
+		}
+	}	
+
+	.history {
+
+
+		margin-top: 20px;
+
+		.search-input {
+			input[type="search"] {
+			    appearance: textfield;
+			}
+
+			*{
+				width: $width;
+				margin-bottom: 20px;
+			}
+			
+		}		
+
+		.history-list {
+			padding-left: 0;
+			height: 500px;
+			overflow-y: scroll;
+			list-style-type: none;
+			font-size: 18px;
+
+			li:hover {
+				cursor:pointer;
+			}
+
+			.logged-history-row {
+				border-bottom: 1px dashed grey;
+				padding-bottom: 10px;
+				margin-bottom: 10px;
+
+				.input-bar {
+					width: 300px;
+				}
+
+				* {
+					height: 100%;
+
+				}
+
+				.button {
+					width: 50px;
+				}
+			}
+			.input-bar {
+
+			}
+
+		}
+	}
+	 
+	//the buttons style is derived from here https://codepen.io/sebj54/pen/oxluI
+	
+	.button {
+	  position: relative;
+	  width: 150px;
+	  height: 50px;
+	  padding: 0;
+	  overflow: hidden;
+	  border-width: 0;
+	  outline: none;	  
+	  box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+	  background-color: darkgrey;
+	  color: #ecf0f1;
+	  transition: background-color .3s;
+
+	  &:hover, &:focus {
+	    background-color: darkgrey;
+	  }
+
+	  
+
+
+	  &:before {
+	  	content: "";
+	  	position: absolute;
+	  	top: 50%;
+	  	left: 50%;
+	  	display: block;
+	  	width: 0;
+	  	padding-top: 0;
+	  	
+	  	background-color: rgba(236, 240, 241, .3);
+	  	transform: translate(-50%, -50%);
+	  }
+
+	  &:active:before {
+	    width: 120%;
+	    padding-top: 120%;
+	    transition: width .2s ease-out, padding-top .2s ease-out;
+	  }
+	}	
+}
+
