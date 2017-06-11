@@ -204,7 +204,6 @@ export default class Expression {
 	 * @return this
 	 */
 	setBacklog(backlog) {
-		console.log(this);
 		this.backlog = backlog;
 		return this;
 	}
