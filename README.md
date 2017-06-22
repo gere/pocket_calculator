@@ -1,4 +1,4 @@
-# Pocket Calculator (Simone Gerevini)
+# Pocket Calculator
 
 ### Installation
 
